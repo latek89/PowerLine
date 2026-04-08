@@ -650,6 +650,12 @@ footer {
   .contact-form {
     padding: 25px 15px;
   }
+  .service-card {
+    padding: 20px 15px;
+  }
+  .service-card img {
+    height: 250px !important;
+  }
   .contact-form-wrapper {
     padding: 30px 15px;
     border-radius: 20px;
