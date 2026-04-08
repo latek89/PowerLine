@@ -107,4 +107,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Mobile Menu Logic ---
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = menuBtn ? menuBtn.querySelector('i') : null;
+
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if (menuIcon) {
+                menuIcon.className = navLinks.classList.contains('active') ? 'fa fa-times' : 'fa fa-bars';
+            }
+            // Lock scroll when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                if (menuIcon) menuIcon.className = 'fa fa-bars';
+                document.body.style.overflow = '';
+            });
+        });
+    }
 });
