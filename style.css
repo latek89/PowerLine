@@ -140,6 +140,19 @@ header.scrolled {
   box-shadow: var(--shadow-sm);
 }
 
+[data-theme="light"] header.scrolled {
+  background-color: var(--white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] header.scrolled .logo,
+[data-theme="light"] header.scrolled .nav-link,
+[data-theme="light"] header.scrolled .mobile-menu-btn,
+[data-theme="light"] header.scrolled .theme-toggle {
+  color: var(--text-dark);
+}
+
 .header-inner {
   display: flex;
   align-items: center;

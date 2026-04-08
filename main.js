@@ -4,17 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const htmlElement = document.documentElement;
     const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
-    // Check for saved theme or system preference
+    // Check for saved theme or default to dark
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        htmlElement.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
-    } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = prefersDark ? 'dark' : 'light';
-        htmlElement.setAttribute('data-theme', initialTheme);
-        updateThemeIcon(initialTheme);
-    }
+    const initialTheme = savedTheme || 'dark';
+    htmlElement.setAttribute('data-theme', initialTheme);
+    updateThemeIcon(initialTheme);
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
