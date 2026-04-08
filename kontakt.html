@@ -28,30 +28,30 @@
         </div>
     </header>
 
-    <section class="section-padding" style="margin-top: 80px; background-color: var(--bg);">
+    <section class="section-padding" style="margin-top: 80px;">
         <div class="container">
-            <div class="contact-layout" style="grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+            <div class="contact-layout">
                 
                 <!-- Left: Contact Form -->
-                <div class="fade-up" style="background: var(--bg-card); padding: 60px; border-radius: 40px; box-shadow: var(--shadow-md);">
-                    <h1 style="font-size: 3.5rem; margin-bottom: 24px;">Skontaktuj się</h1>
-                    <p style="color: var(--text-light); margin-bottom: 40px; font-size: 1.1rem;">Chętnie odpowiemy na Twoje pytania i pomożemy sfinalizować projekt. Wypełnij formularz, aby otrzymać wycenę.</p>
+                <div class="contact-form-wrapper fade-up">
+                    <h1>Skontaktuj się</h1>
+                    <p>Chętnie odpowiemy na Twoje pytania i pomożemy sfinalizować projekt. Wypełnij formularz, aby otrzymać wycenę.</p>
                     
                     <form id="contact-page-form">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-                            <div class="form-group" style="margin-bottom: 0;">
-                                <label style="font-size: 0.8rem; opacity: 0.7;">Imię i Nazwisko</label>
-                                <input type="text" placeholder="Jan Kowalski" style="background-color: rgba(30, 42, 54, 0.05); border: none;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Imię i Nazwisko</label>
+                                <input type="text" placeholder="Jan Kowalski">
                             </div>
-                            <div class="form-group" style="margin-bottom: 0;">
-                                <label style="font-size: 0.8rem; opacity: 0.7;">E-mail</label>
-                                <input type="email" placeholder="email@domena.pl" style="background-color: rgba(30, 42, 54, 0.05); border: none;">
+                            <div class="form-group">
+                                <label>E-mail</label>
+                                <input type="email" placeholder="email@domena.pl">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label style="font-size: 0.8rem; opacity: 0.7;">Temat zapytania</label>
-                            <select style="background-color: rgba(30, 42, 54, 0.05); border: none;">
+                            <label>Temat zapytania</label>
+                            <select>
                                 <option>Nowa Instalacja</option>
                                 <option>Pomiary Elektryczne</option>
                                 <option>Smart Home</option>
@@ -60,11 +60,11 @@
                         </div>
                         
                         <div class="form-group">
-                            <label style="font-size: 0.8rem; opacity: 0.7;">Treść wiadomości</label>
-                            <textarea rows="6" placeholder="W czym możemy pomóc?" style="background-color: rgba(30, 42, 54, 0.05); border: none;"></textarea>
+                            <label>Treść wiadomości</label>
+                            <textarea rows="6" placeholder="W czym możemy pomóc?"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 20px; border-radius: 12px; font-size: 1.1rem;">Wyślij wiadomość</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Wyślij wiadomość</button>
                     </form>
                 </div>
 
