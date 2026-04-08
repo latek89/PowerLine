@@ -476,6 +476,7 @@ input, select, textarea {
   border-radius: var(--radius-sm);
   font-size: 16px; /* Prevents auto-zoom on iOS */
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .offer-cta {
